@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Registro</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- icons -->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section>
+        <div class="container-fluid bg-dark">
+            <div class="row no-gutters">
+                <!-- col -->
+                <div class="col-12 col-xl-5 register-bg p-0">
+                    <!-- slider col left-->
+                    <div class="mySlides foto1 fade"></div>
+                            <div class="mySlides foto2 fade"></div>
+                            <div class="mySlides foto3 fade"></div>
+
+                    <div class="testimonial">
+                        <h3 class="fw-bold text-light">La siguiente revolución dígital.</h3>
+                        <p class="tex-light">La nueva etapa de la revolución dígital se aproxima.</p>
+                    </div>
+                </div>
+
+                <!-- col -->
+                <div class="col-12 col-xl-7">
+                    <div class="content">
+                        <!-- form -->
+                        <form class="form-register">
+                            <h1 class="content__tittle">Crea tu cuenta</h1>
+                            <div class="buttons">
+                                <button type="button" class="btn btn-outline-dark d-inline-block btn--gmail"><i class="icon ion-logo-google"></i>Google</button>
+                                <button type="button" class="btn btn-outline-dark d-inline-block btn--facebook"><i class="icon ion-logo-facebook"></i>Facebook</button>
+                            </div>
+                           
+                            <div class="form-register__body">
+                                <!-- 1 -->
+                                <div class="step active" id="step-1">
+                                    <div class="step__header">
+                                        <h3 class="step__pasos">Paso 1 | 2</h3>
+                                        <h2 class="step__title">Información personal.</h2>
+                                    </div>
+                                    
+                                    <!-- input -->
+                                    <div class="row">
+                                        <div class="form-group col-12 col-md-6 mb-3">
+                                            <label>Nombre <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" placeholder="Tu nombre">
+                                        </div>
+                                        <div class="form-group col-12 col-md-6 mb-3">
+                                            <label>Apellido<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" placeholder="Apellido">
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Correo Electronico<span class="text-danger">*</span></label>
+                                            <input type="email" class="form-control" placeholder="Email">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Contraseña<span class="text-danger">*</span></label>
+                                            <div class="input-container">
+                                                <i class="icon icono ion-md-eye" id="iconEye"></i>
+                                                <input type="password" class="form-control" placeholder="Ingresa una Contraseña" id="myInput">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="buttons">
+                                        <button type="button" class="btn btn-primary step__button--next" data-to_step="2" data-step="1">Siguiente</button>
+                                    </div>
+                                </div>
+
+                                <!-- 2 -->
+                                <div class="step" id="step-2">
+                                    <div class="step__header">
+                                        <h3 class="step__pasos">Paso 2 | 2</h3>
+                                        <h2 class="step__title">Configura tu pago.</h2>
+                                    </div>
+
+                                    <!-- input -->
+                                    <div class="row">
+                                        <div class="form-group col-12 mb-3">
+                                            <label>Banco <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" placeholder="Tarjeta Débito o Crédito">
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Número de tarjeta<span class="text-danger">*</span></label>
+                                            <input type="email" class="form-control" placeholder="400 0012 3456 7899">
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label>Fecha de vencimiento<span class="text-danger">*</span></label>
+                                            <input type="email" class="form-control" placeholder="(MM/AA)">
+                                        </div>
+                                        <div class="form-group d-flex">
+                                            <input type="checkbox" class="form-check-input">
+                                            <label class="form-check-label text-muted m-0">Al seleccionar esta casilla aceptaa nuestro aviso de privacidad y los términos de condiciones</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="buttons">
+                                        <button type="button" class="btn btn-outline-dark step__button--back" data-to_step="1" data-step="2">Volver</button>
+                                        <button type="submit" class="btn btn-primary">Registrarse</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- js  -->
+    <script src="form.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

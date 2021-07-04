@@ -1,0 +1,116 @@
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  padding: 50px 0;
+}
+
+.form-register {
+  width: 60%;
+  @include phone() {
+    width: 85%;
+  }
+}
+
+.form-register__body {
+  display: flex;
+  align-items: flex-start;
+}
+
+
+.step {
+  min-width: 100%;
+  opacity: 0;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+.step.to-left {
+  margin-left: -100%;
+}
+
+.step.inactive {
+  animation-name: scale;
+  animation-duration: 0.2s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+}
+
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+.step__header {
+  .step__title {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  .step__pasos {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    opacity: 80%;
+    font-weight:500;
+  }
+}
+
+
+.form-group {
+  label {
+      font-weight: 500;
+      opacity: 85%;
+      margin-bottom: 10px;
+      font-size: 0.75rem;
+  }
+
+  .form-control {
+      background: var(--color-dark-xx);
+      border: 2px solid var(--color-dark-xx);
+      border-radius: .2rem;
+      padding: 0.625rem 1rem;
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.788);
+      outline: none;
+
+  }
+
+  .form-check-input {
+      margin-right: 15px;
+      @include phone() {
+          margin: 0 20px 0 0;
+          width: 35px;
+      }
+  }
+  .form-check-label {
+      @include phone() {
+          margin: 0 0  20px 0 !important;
+      }
+  }
+
+}
+
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+  .icon {
+      position: absolute;
+      right: 0;
+      padding: 10px;
+      color: white;
+      min-width: 50px;
+      text-align: center;
+  }
+}
+

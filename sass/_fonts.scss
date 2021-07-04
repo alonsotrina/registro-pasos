@@ -1,0 +1,11 @@
+.content__tittle {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin: 0;
+    opacity: 90%;
+
+    @include phone {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+}

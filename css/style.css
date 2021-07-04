@@ -1,0 +1,258 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+:root {
+  --color-dark: #15281f;
+  --color-dark-x: #2d343f;
+  --color-dark-xx: #1f232b;
+  --color-light: #ffffff;
+  --color-grey: #f5f6f8;
+  --color-shadow: #222;
+  --color-border-input: #ddd;
+}
+
+.content__tittle {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin: 0;
+  opacity: 90%;
+}
+@media screen and (max-width: 576px) {
+  .content__tittle {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  padding: 50px 0;
+}
+
+.form-register {
+  width: 60%;
+}
+@media screen and (max-width: 576px) {
+  .form-register {
+    width: 85%;
+  }
+}
+
+.form-register__body {
+  display: flex;
+  align-items: flex-start;
+}
+
+.step {
+  min-width: 100%;
+  opacity: 0;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+.step.to-left {
+  margin-left: -100%;
+}
+
+.step.inactive {
+  animation-name: scale;
+  animation-duration: 0.2s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+}
+
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+.step__header .step__title {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.step__header .step__pasos {
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  opacity: 80%;
+  font-weight: 500;
+}
+
+.form-group label {
+  font-weight: 500;
+  opacity: 85%;
+  margin-bottom: 10px;
+  font-size: 0.75rem;
+}
+.form-group .form-control {
+  background: var(--color-dark-xx);
+  border: 2px solid var(--color-dark-xx);
+  border-radius: 0.2rem;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.788);
+  outline: none;
+}
+.form-group .form-check-input {
+  margin-right: 15px;
+}
+@media screen and (max-width: 576px) {
+  .form-group .form-check-input {
+    margin: 0 20px 0 0;
+    width: 35px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .form-group .form-check-label {
+    margin: 0 0 20px 0 !important;
+  }
+}
+
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+}
+.input-container .icon {
+  position: absolute;
+  right: 0;
+  padding: 10px;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+}
+.buttons > button {
+  margin-right: 15px;
+}
+@media screen and (max-width: 576px) {
+  .buttons {
+    justify-content: space-between;
+  }
+  .buttons > button {
+    margin-right: 0;
+  }
+}
+
+.btn {
+  padding: 1rem 0rem !important;
+  border-radius: 5rem;
+  font-size: 14px;
+  width: 10rem;
+  color: var(--color-light);
+  margin-top: 20px;
+  display: inline-block;
+}
+.btn .icon {
+  margin-right: 8px;
+}
+@media screen and (max-width: 576px) {
+  .btn {
+    width: 48%;
+    margin-top: 10px;
+  }
+}
+
+.btn--facebook:hover {
+  background: #1778f2;
+}
+
+.btn--gmail:hover {
+  background: #ea4335;
+}
+
+.btn-outline-dark {
+  border: 2px solid var(--color-dark-x);
+  background: transparent;
+}
+
+.register-bg {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.register-bg .testimonial {
+  position: absolute;
+  bottom: 0;
+  padding: 40px 30px;
+}
+.register-bg .mySlides {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  transition: opacity 0.5s linear;
+}
+@media screen and (max-width: 576px) {
+  .register-bg .mySlides {
+    height: 60vh;
+  }
+}
+.register-bg .mySlides.foto1 {
+  background-image: url("../hero.jpg");
+}
+.register-bg .mySlides.foto2 {
+  background-image: url("../foto2.png");
+}
+.register-bg .mySlides.foto3 {
+  background-image: url("../foto3.png");
+}
+
+/* animación slider */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 4s;
+  animation-name: fade;
+  animation-duration: 4s;
+  background: #000;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 0.9;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 0.9;
+  }
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  background: var(--color-grey);
+  color: var(--color-light);
+  letter-spacing: 0.05rem;
+}
+
+.bg-light {
+  background: var(--color-light) !important;
+}
+
+.bg-dark {
+  background: var(--color-dark) !important;
+}
+
+/*# sourceMappingURL=style.css.map */

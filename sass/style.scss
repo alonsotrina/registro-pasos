@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import "variables";
+@import "mixins";
+@import "fonts";
+@import "form";
+@import "buttons";
+@import "slider";
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    background: var(--color-grey);
+    color: var(--color-light);
+    letter-spacing: .05rem;
+}
+
+.bg-light {
+    background: var(--color-light) !important;
+}
+
+.bg-dark {
+    background: var(--color-dark) !important;
+}
+
+
+
+

@@ -1,0 +1,47 @@
+.buttons {
+  display: flex;
+  > button {
+    margin-right: 15px;
+  }
+  @include phone() {
+    justify-content: space-between;
+    > button {
+      margin-right: 0;
+    }
+  }
+}
+
+.btn {
+  padding: 1rem 0rem !important;
+  border-radius: 5rem;
+  font-size: 14px;
+  width: 10rem;
+  color: var(--color-light);
+  margin-top: 20px;
+  display: inline-block;
+  .icon {
+    margin-right: 8px;
+  }
+
+  @include phone {
+    width: 48%;
+    margin-top: 10px;
+  }
+}
+
+.btn--facebook {
+  &:hover {
+    background: #1778f2;
+  }
+}
+
+.btn--gmail {
+  &:hover {
+    background: #ea4335;
+  }
+}
+
+.btn-outline-dark {
+  border: 2px solid var(--color-dark-x);
+  background: transparent;
+}
